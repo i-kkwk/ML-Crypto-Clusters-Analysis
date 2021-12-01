@@ -22,9 +22,13 @@
 
 * Next, further reduce the dataset dimensions with t-SNE and visually inspect the results. In order to accomplish this task, run t-SNE on the principal components: the output of the PCA transformation. Then create a scatter plot of the t-SNE output. Observe whether there are distinct clusters or not.
 
+![TSNEscatter](Images/tsne_scatter.png)
+
 ### Cluster Analysis with k-Means
 
 * Create an elbow plot to identify the best number of clusters. Use a for-loop to determine the inertia for each `k` between 1 through 10. Determine.
+
+![Elbow](Images/elbow.png)
 
 
 

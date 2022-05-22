@@ -4,25 +4,25 @@
 
 * Read `crypto_data.csv` into Pandas. The dataset was obtained from [CryptoCompare](https://min-api.cryptocompare.com/data/all/coinlist).
 
-* Discard all cryptocurrencies that are not being traded. In other words, filter for currencies that are currently being traded. Drop the `IsTrading` column from the dataframe.
+* Discard all cryptocurrencies that are not being traded by filtered for currencies that are currently being traded. Drop the `IsTrading` column from the dataframe.
 
 * Remove all rows that have at least one null value.
 
-* Filter for cryptocurrencies that have been mined. That is, the total coins mined should be greater than zero.
+* Filterd for cryptocurrencies that have been mined. That is, the total coins mined should be greater than zero.
 
 * In order for the dataset to be comprehensible to a machine learning algorithm, its data should be numeric. Since the coin names do not contribute to the analysis of the data, delete the `CoinName` from the original dataframe.
 
-* Next step in data preparation is to convert the remaining features with text values, `Algorithm` and `ProofType`, into numerical data. To accomplish this task, use Pandas to create dummy variables. Examine the number of rows and columns of the dataset now. How did they change?
+* Converted the remaining features with text values, `Algorithm` and `ProofType`, into numerical data. To accomplish this task, used Pandas to create dummy variables. Examine the number of rows and columns of the dataset now. 
 
-* Standardize the dataset so that columns that contain larger values do not unduly influence the outcome.
+* Standardized the dataset so that columns that contain larger values.
 
 
 ### Dimensionality Reduction
 
 
-* Creating dummy variables above dramatically increased the number of features in your dataset. Perform dimensionality reduction with PCA. Rather than specify the number of principal components when instantiate the PCA model, it is possible to state the desired **explained variance**. 
+* Created dummy variables above dramatically increased the number of features in your dataset. Perform dimensionality reduction with PCA. Rather than specify the number of principal components when instantiate the PCA model, it is possible to state the desired **explained variance**. 
 
-* Next, further reduce the dataset dimensions with t-SNE and visually inspect the results. In order to accomplish this task, run t-SNE on the principal components: the output of the PCA transformation. Then create a scatter plot of the t-SNE output. Observe whether there are distinct clusters or not.
+* Next, further reduce the dataset dimensions with t-SNE and visually inspect the results. Run t-SNE on the principal components: the output of the PCA transformation. Then created a scatter plot of the t-SNE output. Observed whether there are distinct clusters or not.
 
 
 ![TSNEscatter](Images/tsne_scatter.png)
@@ -31,7 +31,7 @@
 ### Cluster Analysis with k-Means
 
 
-* Create an elbow plot to identify the best number of clusters. Use a for-loop to determine the inertia for each `k` between 1 through 10. Determine.
+* Created an elbow plot to identify the best number of clusters. Used a for-loop to determine the inertia for each `k` between 1 through 10. Determine.
 
 
 ![Elbow](Images/elbow.png)
